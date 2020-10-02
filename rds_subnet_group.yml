@@ -1,0 +1,14 @@
+---
+- hosts: localhost
+  tasks:
+          - rds_subnet_group:
+               aws_access_key: " creds "
+               aws_secret_key: " creds "
+               state: present
+               name: norwegian-blue
+               region: us-east-1
+               description: My Fancy Ex Parrot Subnet Group
+               subnets:
+                 - "{{sub1_id}}"
+                 - "{{sub2_id}}"
+  
